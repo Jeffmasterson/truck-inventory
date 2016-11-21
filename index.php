@@ -1,4 +1,4 @@
-PHP Source:
+
 <!DOCTYPE html>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,73 +12,50 @@ PHP Source:
 <body>
 
 <?php
-class Truck1 {
-    function __construct() {
-        $this->title = "Dodge";
-        $this->img = "http://i.imgur.com/eZskvWV.jpg";
-        $this->description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+class Truck {
+    function __construct($title,$thumb_url,$decription) {
+        $this->title = $title;
+        $this->thumb_url = $thumb_url;
+        $this->description = $decription;
+
     }
 }
+$truck1 = new Truck('Dodge','http://i.imgur.com/eZskvWV.jpg','The best of them all. Dodges are for people with big dicks. Dodge Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
+$truck2 = new Truck('Ford','http://i.imgur.com/0aqmL1O.jpg','This one is okay. It screams I have a medium sized weiner, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
+$truck3 = new Truck('Chevy','http://i.imgur.com/nzxxXgz.jpg','Small weiner alert. Sean wishes he had a chevy, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
 ?>
 
-<?php
-class Truck2 {
-    function __construct() {
-        $this->title = "Ford";
-        $this->img = "http://i.imgur.com/0aqmL1O.jpg";
-        $this->description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-    }
-}
-?>
-
-<?php
-class Truck3 {
-    function __construct() {
-        $this->title = "Chevy";
-        $this->img = "http://i.imgur.com/nzxxXgz.jpg";
-        $this->description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-    }
-}
-?>
 
 
 <div class="col-md-4">
     <div class="col-md-4">
-        <img src="<?php $truck = new Truck1();
-        echo $truck -> img; ?>">
+        <img src="<?=$truck1->thumb_url;?>">
     </div>
     <div class="col-md-8">
-        <h2><?php $truck = new Truck1();
-            echo $truck -> title; ?></h2>
-        <p><?php $truck = new Truck1();
-            echo $truck -> description; ?></p>
+        <h2><?=$truck1->title;?></h2>
+        <p><?=$truck1->description;?></p>
     </div>
 </div>
 <div class="col-md-4">
     <div class="col-md-4">
-        <img src="<?php $truck = new Truck2();
-        echo $truck -> img; ?>">
+        <img src="<?=$truck2->thumb_url;?>">
     </div>
     <div class="col-md-8">
-        <h2><?php $truck = new Truck2();
-            echo $truck -> title; ?></h2>
-        <p><?php $truck = new Truck2();
-            echo $truck -> description; ?></p>
+        <h2><?=$truck2->title;?></h2>
+        <p><?=$truck2->description;?></p>
     </div>
 </div>
 <div class="col-md-4">
     <div class="col-md-4">
-        <img src="<?php $truck = new Truck3();
-        echo $truck -> img; ?>">
+        <img src="<?=$truck3->thumb_url;?>">
     </div>
     <div class="col-md-8">
-        <h2><?php $truck = new Truck3();
-            echo $truck -> title; ?></h2>
-        <p><?php $truck = new Truck3();
-            echo $truck -> description; ?></p>
+        <h2><?=$truck3->title;?></h2>
+        <p><?=$truck3->description;?></p>
     </div>
 </div>
 
 
 </body>
 </html>
+
