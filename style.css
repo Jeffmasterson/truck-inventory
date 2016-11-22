@@ -1,0 +1,23 @@
+.truck-text {
+    font-size: 14px;
+    color: #666666;
+}
+h2 {
+    color: #666666;
+}
+h4 {
+    color: #666666;
+}
+h3 {
+    color: #666666;
+}
+p {
+    font-weight: 500;
+}
+.truck img {
+    width: 100%;
+}
+
+.truck-background {
+    background-color: #cdcdcd;
+}
